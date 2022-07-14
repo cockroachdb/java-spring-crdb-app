@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <title>Getting Started: Serving Web Content</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="flex">
+   <p> All Leaderboard Entries </p>
+
+   <button>
+       <a href="/create-entry">
+           Create New Entry
+       </a>
+   </button>
+</nav>
+
+<div class="container">
+   <div class="content">
+       <table style="width: 100%; text-align: center;">
+           <tr style="border-bottom: 1px solid #000">
+               <th>Game Name</th>
+               <th>Game Score</th>
+               <th>Player Name</th>
+               <th>Team Size</th>
+               <th>Created</th>
+           </tr>
+
+           <tr th:each="leaderboard: ${entries}">
+               <td th:text="${leaderboard.gameName}"></td>
+               <td th:text="${leaderboard.gameScore}"></td>
+               <td th:text="${leaderboard.playerUsername}"></td>
+               <td th:text="${leaderboard.teamSize}"></td>
+               <td th:text="${leaderboard.createdAt}"></td>
+           </tr>
+       </table>
+   </div>
+</div>
+
+</body>
+</html>
+

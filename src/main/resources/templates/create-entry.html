@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>CockroachDB Java Leaderboard</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="flex">
+   <p> All Entries </p>
+
+   <button>
+       <a href="/">
+           View All Leaderboards
+       </a>
+   </button>
+</nav>
+
+<div class="container">
+   <form th:action="@{/create-entry}" th:object="${leaderboard}" method="post">
+       <h2 class="align-center"> Create New Leaderboard </h2>
+       <hr/>
+
+       <br/>
+       <div>
+           <label for="leaderboardName">
+               Leaderboard Name
+           </label>
+           <br/>
+           <input
+                   type="text"
+                   th:field="*{gameName}"
+                   id="leaderboardName"
+                   placeholder="Leaderboard Name"
+           >
+           <br/>
+       </div>
+
+       <div>
+           <label for="username">
+               Player Username
+           </label>
+           <br/>
+           <input
+                   type="text"
+                   th:field="*{playerUsername}"
+                   id="username"
+                   placeholder="Your Player Username"
+           >
+       </div>
+
+       <div>
+           <label for="teamSize">
+               Team Size
+           </label>
+           <br/>
+           <input
+                   type="number"
+                   th:field="*{teamSize}"
+                   id="teamSize"
+                   placeholder="Your Team Size"
+           >
+       </div>
+
+       <div>
+           <label for="gameScore">
+               Game Score
+           </label>
+           <br/>
+
+           <input
+                   type="number"
+                   th:field="*{gameScore}"
+                   id="gameScore"
+                   placeholder="Your Game Score"
+           >
+       </div>
+
+       <br/>
+       <button type="submit">Create Leaderboard</button>
+   </form>
+</div>
+</body>
+
+</html>
+
