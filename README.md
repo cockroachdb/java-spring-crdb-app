@@ -6,4 +6,4 @@ To learn how to use CockroachDB with a JPA provider like Hibernate, you’ll bui
 
 The Spring Boot application will contain two HTML pages and will be deployed to the cloud using Heroku.
 
-Full instructions are available via [https://www.cockroachlabs.com/blog/LINK](https://www.cockroachlabs.com/blog/LINK).
+Full instructions are available via [https://www.cockroachlabs.com/blog/java-spring-jpa-cockroachdb/](https://www.cockroachlabs.com/blog/java-spring-jpa-cockroachdb/).
